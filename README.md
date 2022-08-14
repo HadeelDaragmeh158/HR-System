@@ -8,4 +8,6 @@ I created five models in this task :
 3.	Department
 4.	Directorate 
 5.	Leave
-And make the relations between them. this task without front end you need to use somthing like Postman or create frontend.
+
+
+And I created relations between them. this task without front end you need to use somthing like Postman or create frontend.
