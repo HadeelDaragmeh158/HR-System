@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HR System</title>
+</head>
+<body>
+<h1>Hadeel's Task </h1>
+<form action="addemployee" method="post">
+    <p>First Name</p><input type="text" name="firstName"/></br>
+    <p>Last Name </p><input type="text" name="lastName" /></br>
+    <button type="submit">Submit</button>
+</form>
+
+<form action="adddirectorate" method="post">
+    <p>Directorate Name</p><input type="text" name="directorateName"/></br>
+    <button type="submit">Submit</button>
+</form>
+
+<form action="adddepartment" method="post">
+    <p>Directorate Name</p><input type="text" name="departmentName"/></br>
+    <button type="submit">Submit</button>
+</form>
+
+<ul th:each="employee : ${employeeList}" >
+    <p>ID</p><span th:text="${employee.employeeId}"></span>
+    <p>Name</p><span th:text="${employee.firstName}"></span>
+
+    <p>**********************************************************</p>
+</ul>
+
+
+</body>
+</html>
