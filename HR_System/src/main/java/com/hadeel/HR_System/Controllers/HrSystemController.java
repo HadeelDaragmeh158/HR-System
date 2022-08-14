@@ -82,8 +82,7 @@ public class HrSystemController {
     //Department
     @PostMapping("/adddepartment")
     public RedirectView createNewDepartment(Department department){
-//        dept.createNewDepartment(department);  // I ADDED BY SERVICES
-        departmentRepository.save(department);  //THE SECAND WAY TO ADD NEW DEPATRTMENT
+        departmentRepository.save(department);
         return  new RedirectView("alldepartments");
     }
     @GetMapping("/alldepartments")
@@ -147,7 +146,7 @@ public class HrSystemController {
     public String showEditEmployeePage(@PathVariable(name = "id") Long id,Model m) {
         Employee myUser = employeeRepository.getById(id);
         m.addAttribute("myUser", myUser);
-        return "edit_employee";
+        return "index.html";
     }
 
     @PostMapping("/edit_employee/{employeeId}")
